@@ -9,10 +9,10 @@ function map(ary, cb){
 }
 
 function reduce(ary, cb, start){
-    let r = (!!starting) ? starting : src[0]
-    let i = (!!starting) ? 0 : 1
-    for (; i < src.length; i++) {
-        r = cb(src[i], r)
+    let r = (!!start) ? start : ary[0]
+    let i = (!!start) ? 0 : 1
+    for (; i < ary.length; i++) {
+        r = cb(ary[i], r)
     }
     return r;
 }
