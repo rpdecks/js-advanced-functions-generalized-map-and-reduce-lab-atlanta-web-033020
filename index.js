@@ -8,10 +8,11 @@ function map(ary, cb){
     return newAry
 }
 
-function reduce(ary, start=0, cb){
-    let agg = start;
-
-    for (let i = 0; i < ary.length; i++) {
-        agg  
+function reduce(ary, cb, start){
+    let r = (!!starting) ? starting : src[0]
+    let i = (!!starting) ? 0 : 1
+    for (; i < src.length; i++) {
+        r = cb(src[i], r)
     }
+    return r;
 }
